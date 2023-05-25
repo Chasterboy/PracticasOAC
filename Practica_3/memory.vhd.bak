@@ -1,0 +1,23 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity memory is 
+	Port( dir : in STD_LOGIC_VECTOR(6 downto 0);--Entradas + Edo siguiente
+			data : out STD_LOGIC_VECTOR(6 downto 0));--Liga +salidas
+end memory;
+
+architecture Behavioral of memory is
+	type mem is array(0 to 31) of STD_LOGIC_VECTOR(5 downto 0);
+	signal internal_mem : mem;
+	
+	begin
+		--Estado A
+		internal_mem(0) <= "01" & "0001";
+		
+		process(dir)
+			begin
+				data <= internal_mem(conv_integer(unsigned(dir)));
+		end process;
+end Behavioral;

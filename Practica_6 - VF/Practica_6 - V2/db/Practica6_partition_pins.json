@@ -1,0 +1,101 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Entrada[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Entrada[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Entrada[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Entrada[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Salidas[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Salidas[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Salidas[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Salidas[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Salidas[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Salidas[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Y",
+					"strict" : false
+				},
+				{
+					"name" : "X",
+					"strict" : false
+				},
+				{
+					"name" : "INT",
+					"strict" : false
+				},
+				{
+					"name" : "RESET",
+					"strict" : false
+				},
+				{
+					"name" : "Entradaint[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Entradatrans[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Entradaint[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Entradatrans[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Entradaint[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Entradatrans[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Entradaint[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Entradatrans[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

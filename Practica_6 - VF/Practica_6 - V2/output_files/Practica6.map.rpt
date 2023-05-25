@@ -1,0 +1,461 @@
+Analysis & Synthesis report for Practica6
+Fri May 19 08:40:59 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri May 19 08:40:59 2023          ;
+; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                      ; Practica6                                      ;
+; Top-level Entity Name              ; Practica6                                      ;
+; Family                             ; MAX 10                                         ;
+; Total logic elements               ; 71                                             ;
+;     Total combinational functions  ; 63                                             ;
+;     Dedicated logic registers      ; 56                                             ;
+; Total registers                    ; 56                                             ;
+; Total pins                         ; 23                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
+; UFM blocks                         ; 0                                              ;
+; ADC blocks                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; Practica6          ; Practica6          ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+; divisor_datos.vhd                ; yes             ; User VHDL File                     ; C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/divisor_datos.vhd  ;         ;
+; secuenciador.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/secuenciador.bdf   ;         ;
+; Practica6.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/Practica6.bdf      ;         ;
+; logica_interna.vhd               ; yes             ; Auto-Found VHDL File               ; C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/logica_interna.vhd ;         ;
+; mux_direccion.vhd                ; yes             ; Auto-Found VHDL File               ; C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_direccion.vhd  ;         ;
+; registro_4.vhd                   ; yes             ; Auto-Found VHDL File               ; C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_4.vhd     ;         ;
+; incrementador.vhd                ; yes             ; Auto-Found VHDL File               ; C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/incrementador.vhd  ;         ;
+; registro_1.vhd                   ; yes             ; Auto-Found VHDL File               ; C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_1.vhd     ;         ;
+; div_frec.vhd                     ; yes             ; Auto-Found VHDL File               ; C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/div_frec.vhd       ;         ;
+; memoria.vhd                      ; yes             ; Auto-Found VHDL File               ; C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/memoria.vhd        ;         ;
+; mux_entradas.vhd                 ; yes             ; Auto-Found VHDL File               ; C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_entradas.vhd   ;         ;
+; registro_2.vhd                   ; yes             ; Auto-Found VHDL File               ; C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_2.vhd     ;         ;
+; mux_salida_v_f.vhd               ; yes             ; Auto-Found VHDL File               ; C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_salida_v_f.vhd ;         ;
+; registro_6.vhd                   ; yes             ; Auto-Found VHDL File               ; C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_6.vhd     ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                             ;
++---------------------------------------------+---------------------------+
+; Resource                                    ; Usage                     ;
++---------------------------------------------+---------------------------+
+; Estimated Total logic elements              ; 71                        ;
+;                                             ;                           ;
+; Total combinational functions               ; 63                        ;
+; Logic element usage by number of LUT inputs ;                           ;
+;     -- 4 input functions                    ; 29                        ;
+;     -- 3 input functions                    ; 6                         ;
+;     -- <=2 input functions                  ; 28                        ;
+;                                             ;                           ;
+; Logic elements by mode                      ;                           ;
+;     -- normal mode                          ; 38                        ;
+;     -- arithmetic mode                      ; 25                        ;
+;                                             ;                           ;
+; Total registers                             ; 56                        ;
+;     -- Dedicated logic registers            ; 56                        ;
+;     -- I/O registers                        ; 0                         ;
+;                                             ;                           ;
+; I/O pins                                    ; 23                        ;
+;                                             ;                           ;
+; Embedded Multiplier 9-bit elements          ; 0                         ;
+;                                             ;                           ;
+; Maximum fan-out node                        ; div_frec:inst1|cuenta[26] ;
+; Maximum fan-out                             ; 30                        ;
+; Total fan-out                               ; 361                       ;
+; Average fan-out                             ; 2.19                      ;
++---------------------------------------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                    ;
++--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                              ; Entity Name    ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------+----------------+--------------+
+; |Practica6                     ; 63 (0)              ; 56 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 23   ; 0            ; 0          ; |Practica6                                       ; Practica6      ; work         ;
+;    |div_frec:inst1|            ; 27 (27)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica6|div_frec:inst1                        ; div_frec       ; work         ;
+;    |memoria:Memoria|           ; 17 (17)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica6|memoria:Memoria                       ; memoria        ; work         ;
+;    |mux_entradas:muxEn|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica6|mux_entradas:muxEn                    ; mux_entradas   ; work         ;
+;    |mux_salida_v_f:muxsalida|  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica6|mux_salida_v_f:muxsalida              ; mux_salida_v_f ; work         ;
+;    |registro_1:VF|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica6|registro_1:VF                         ; registro_1     ; work         ;
+;    |registro_2:MI|             ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica6|registro_2:MI                         ; registro_2     ; work         ;
+;    |registro_2:Prueba|         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica6|registro_2:Prueba                     ; registro_2     ; work         ;
+;    |registro_4:Interrupcion|   ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica6|registro_4:Interrupcion               ; registro_4     ; work         ;
+;    |registro_4:Liga|           ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica6|registro_4:Liga                       ; registro_4     ; work         ;
+;    |registro_4:Transformacion| ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica6|registro_4:Transformacion             ; registro_4     ; work         ;
+;    |registro_6:SalidaV|        ; 0 (0)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica6|registro_6:SalidaV                    ; registro_6     ; work         ;
+;    |registro_6:salidaF|        ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica6|registro_6:salidaF                    ; registro_6     ; work         ;
+;    |secuenciador:inst|         ; 15 (0)              ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica6|secuenciador:inst                     ; secuenciador   ; work         ;
+;       |incrementador:inst|     ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica6|secuenciador:inst|incrementador:inst  ; incrementador  ; work         ;
+;       |mux_direccion:inst4|    ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica6|secuenciador:inst|mux_direccion:inst4 ; mux_direccion  ; work         ;
+;       |registro_4:inst3|       ; 1 (1)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Practica6|secuenciador:inst|registro_4:inst3    ; registro_4     ; work         ;
++--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; secuenciador:inst|logica_interna:inst8|Sel         ; VCC                 ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                       ;
++---------------------------------------+--------------------------------------------------+
+; Register name                         ; Reason for Removal                               ;
++---------------------------------------+--------------------------------------------------+
+; registro_6:salidaF|internal_value[4]  ; Merged with registro_6:SalidaV|internal_value[4] ;
+; registro_6:salidaF|internal_value[3]  ; Merged with registro_6:SalidaV|internal_value[3] ;
+; registro_6:salidaF|internal_value[1]  ; Merged with registro_6:SalidaV|internal_value[1] ;
+; registro_6:salidaF|internal_value[2]  ; Merged with registro_6:SalidaV|internal_value[2] ;
+; div_frec:inst1|cuenta[27]             ; Lost fanout                                      ;
+; Total Number of Removed Registers = 5 ;                                                  ;
++---------------------------------------+--------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 56    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 29    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Practica6|secuenciador:inst|mux_direccion:inst4|L[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 23                          ;
+; cycloneiii_ff         ; 56                          ;
+;     CLR               ; 29                          ;
+;     plain             ; 27                          ;
+; cycloneiii_lcell_comb ; 63                          ;
+;     arith             ; 25                          ;
+;         2 data inputs ; 24                          ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 38                          ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 29                          ;
+;                       ;                             ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.20                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Fri May 19 08:40:45 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica6 -c Practica6
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file divisor_datos.vhd
+    Info (12022): Found design unit 1: divisor_datos-Behavioral File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/divisor_datos.vhd Line: 18
+    Info (12023): Found entity 1: divisor_datos File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/divisor_datos.vhd Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file secuenciador.bdf
+    Info (12023): Found entity 1: secuenciador
+Info (12021): Found 1 design units, including 1 entities, in source file practica6.bdf
+    Info (12023): Found entity 1: Practica6
+Info (12127): Elaborating entity "Practica6" for the top level hierarchy
+Info (12128): Elaborating entity "secuenciador" for hierarchy "secuenciador:inst"
+Warning (12125): Using design file logica_interna.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: logica_interna-Behavioral File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/logica_interna.vhd Line: 15
+    Info (12023): Found entity 1: logica_interna File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/logica_interna.vhd Line: 4
+Info (12128): Elaborating entity "logica_interna" for hierarchy "secuenciador:inst|logica_interna:inst8"
+Warning (10631): VHDL Process Statement warning at logica_interna.vhd(18): inferring latch(es) for signal or variable "Sel", which holds its previous value in one or more paths through the process File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/logica_interna.vhd Line: 18
+Warning (10631): VHDL Process Statement warning at logica_interna.vhd(18): inferring latch(es) for signal or variable "PL", which holds its previous value in one or more paths through the process File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/logica_interna.vhd Line: 18
+Warning (10631): VHDL Process Statement warning at logica_interna.vhd(18): inferring latch(es) for signal or variable "NMAP", which holds its previous value in one or more paths through the process File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/logica_interna.vhd Line: 18
+Warning (10631): VHDL Process Statement warning at logica_interna.vhd(18): inferring latch(es) for signal or variable "VECT", which holds its previous value in one or more paths through the process File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/logica_interna.vhd Line: 18
+Info (10041): Inferred latch for "VECT" at logica_interna.vhd(18) File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/logica_interna.vhd Line: 18
+Info (10041): Inferred latch for "NMAP" at logica_interna.vhd(18) File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/logica_interna.vhd Line: 18
+Info (10041): Inferred latch for "PL" at logica_interna.vhd(18) File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/logica_interna.vhd Line: 18
+Info (10041): Inferred latch for "Sel" at logica_interna.vhd(18) File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/logica_interna.vhd Line: 18
+Warning (12125): Using design file mux_direccion.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: mux_direccion-Behavioral File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_direccion.vhd Line: 14
+    Info (12023): Found entity 1: mux_direccion File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_direccion.vhd Line: 5
+Info (12128): Elaborating entity "mux_direccion" for hierarchy "secuenciador:inst|mux_direccion:inst4"
+Warning (10631): VHDL Process Statement warning at mux_direccion.vhd(16): inferring latch(es) for signal or variable "L", which holds its previous value in one or more paths through the process File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_direccion.vhd Line: 16
+Info (10041): Inferred latch for "L[0]" at mux_direccion.vhd(16) File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_direccion.vhd Line: 16
+Info (10041): Inferred latch for "L[1]" at mux_direccion.vhd(16) File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_direccion.vhd Line: 16
+Info (10041): Inferred latch for "L[2]" at mux_direccion.vhd(16) File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_direccion.vhd Line: 16
+Info (10041): Inferred latch for "L[3]" at mux_direccion.vhd(16) File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_direccion.vhd Line: 16
+Warning (12125): Using design file registro_4.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: registro_4-Behavioral File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_4.vhd Line: 15
+    Info (12023): Found entity 1: registro_4 File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_4.vhd Line: 5
+Info (12128): Elaborating entity "registro_4" for hierarchy "secuenciador:inst|registro_4:inst3"
+Warning (12125): Using design file incrementador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: incrementador-Behavioral File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/incrementador.vhd Line: 13
+    Info (12023): Found entity 1: incrementador File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/incrementador.vhd Line: 6
+Info (12128): Elaborating entity "incrementador" for hierarchy "secuenciador:inst|incrementador:inst"
+Warning (12125): Using design file registro_1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: registro_1-Behavioral File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_1.vhd Line: 15
+    Info (12023): Found entity 1: registro_1 File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_1.vhd Line: 5
+Info (12128): Elaborating entity "registro_1" for hierarchy "registro_1:VF"
+Warning (12125): Using design file div_frec.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: div_frec-Behavioral File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/div_frec.vhd Line: 15
+    Info (12023): Found entity 1: div_frec File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/div_frec.vhd Line: 6
+Info (12128): Elaborating entity "div_frec" for hierarchy "div_frec:inst1"
+Info (12128): Elaborating entity "divisor_datos" for hierarchy "divisor_datos:divisor"
+Warning (12125): Using design file memoria.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: memoria-Behavioral File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/memoria.vhd Line: 12
+    Info (12023): Found entity 1: memoria File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/memoria.vhd Line: 5
+Info (12128): Elaborating entity "memoria" for hierarchy "memoria:Memoria"
+Warning (10492): VHDL Process Statement warning at memoria.vhd(60): signal "internal_mem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/memoria.vhd Line: 60
+Warning (12125): Using design file mux_entradas.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: mux_entradas-Behavioral File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_entradas.vhd Line: 13
+    Info (12023): Found entity 1: mux_entradas File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_entradas.vhd Line: 3
+Info (12128): Elaborating entity "mux_entradas" for hierarchy "mux_entradas:muxEn"
+Warning (10631): VHDL Process Statement warning at mux_entradas.vhd(15): inferring latch(es) for signal or variable "L", which holds its previous value in one or more paths through the process File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_entradas.vhd Line: 15
+Info (10041): Inferred latch for "L" at mux_entradas.vhd(15) File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_entradas.vhd Line: 15
+Warning (12125): Using design file registro_2.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: registro_2-Behavioral File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_2.vhd Line: 15
+    Info (12023): Found entity 1: registro_2 File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_2.vhd Line: 5
+Info (12128): Elaborating entity "registro_2" for hierarchy "registro_2:Prueba"
+Warning (12125): Using design file mux_salida_v_f.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: mux_salida_v_f-Behavioral File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_salida_v_f.vhd Line: 14
+    Info (12023): Found entity 1: mux_salida_v_f File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_salida_v_f.vhd Line: 5
+Info (12128): Elaborating entity "mux_salida_v_f" for hierarchy "mux_salida_v_f:muxsalida"
+Warning (10631): VHDL Process Statement warning at mux_salida_v_f.vhd(16): inferring latch(es) for signal or variable "L", which holds its previous value in one or more paths through the process File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_salida_v_f.vhd Line: 16
+Info (10041): Inferred latch for "L[0]" at mux_salida_v_f.vhd(16) File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_salida_v_f.vhd Line: 16
+Info (10041): Inferred latch for "L[1]" at mux_salida_v_f.vhd(16) File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_salida_v_f.vhd Line: 16
+Info (10041): Inferred latch for "L[2]" at mux_salida_v_f.vhd(16) File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_salida_v_f.vhd Line: 16
+Info (10041): Inferred latch for "L[3]" at mux_salida_v_f.vhd(16) File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_salida_v_f.vhd Line: 16
+Info (10041): Inferred latch for "L[4]" at mux_salida_v_f.vhd(16) File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_salida_v_f.vhd Line: 16
+Info (10041): Inferred latch for "L[5]" at mux_salida_v_f.vhd(16) File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_salida_v_f.vhd Line: 16
+Warning (12125): Using design file registro_6.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: registro_6-Behavioral File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_6.vhd Line: 15
+    Info (12023): Found entity 1: registro_6 File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_6.vhd Line: 5
+Info (12128): Elaborating entity "registro_6" for hierarchy "registro_6:salidaF"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node feeding "secuenciador:inst|mux_direccion:inst4|L[3]" into a selector File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_direccion.vhd Line: 16
+    Warning (13048): Converted tri-state node feeding "secuenciador:inst|mux_direccion:inst4|L[2]" into a selector File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_direccion.vhd Line: 16
+    Warning (13048): Converted tri-state node feeding "secuenciador:inst|mux_direccion:inst4|L[1]" into a selector File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_direccion.vhd Line: 16
+    Warning (13048): Converted tri-state node feeding "secuenciador:inst|mux_direccion:inst4|L[0]" into a selector File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_direccion.vhd Line: 16
+    Warning (13049): Converted tri-state buffer "registro_6:SalidaV|DATA_OUT[0]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_6.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "registro_6:SalidaV|DATA_OUT[1]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_6.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "registro_6:SalidaV|DATA_OUT[2]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_6.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "registro_6:SalidaV|DATA_OUT[3]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_6.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "registro_6:SalidaV|DATA_OUT[4]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_6.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "registro_6:SalidaV|DATA_OUT[5]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_6.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "registro_6:salidaF|DATA_OUT[0]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_6.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "registro_6:salidaF|DATA_OUT[1]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_6.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "registro_6:salidaF|DATA_OUT[2]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_6.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "registro_6:salidaF|DATA_OUT[3]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_6.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "registro_6:salidaF|DATA_OUT[4]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_6.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "registro_6:salidaF|DATA_OUT[5]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_6.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "registro_2:MI|DATA_OUT[0]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_2.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "registro_2:MI|DATA_OUT[1]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_2.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "registro_2:Prueba|DATA_OUT[0]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_2.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "registro_2:Prueba|DATA_OUT[1]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_2.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "registro_1:VF|DATA_OUT" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_1.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "secuenciador:inst|registro_4:inst3|DATA_OUT[0]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_4.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "secuenciador:inst|registro_4:inst3|DATA_OUT[1]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_4.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "secuenciador:inst|registro_4:inst3|DATA_OUT[2]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_4.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "secuenciador:inst|registro_4:inst3|DATA_OUT[3]" feeding internal logic into a wire File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/registro_4.vhd Line: 11
+Warning (14026): LATCH primitive "mux_entradas:muxEn|L" is permanently enabled File: C:/Arquitectura/Practica_6 - VF/Practica_6 - V2/mux_entradas.vhd Line: 10
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 94 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 71 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 47 warnings
+    Info: Peak virtual memory: 4850 megabytes
+    Info: Processing ended: Fri May 19 08:40:59 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:31
+
+

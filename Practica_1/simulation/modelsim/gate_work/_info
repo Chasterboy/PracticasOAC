@@ -1,0 +1,113 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Arquitectura/Practica_1/simulation/modelsim
+Ehard_block
+Z1 w1677709989
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 DXjFZ7@:`];0N[nW:BUOE2
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 7hgTiIlm7;@8G_GJR1mj_1
+!i122 0
+R0
+Z8 8Practica1.vho
+Z9 FPractica1.vho
+l0
+L35 1
+VH73DDHU2ac^:D?]T;@N=M3
+!s100 3A]XnMhF<;9mKUe5mn3aM1
+Z10 OV;C;2020.1;71
+31
+Z11 !s110 1677710067
+!i10b 1
+Z12 !s108 1677710067.000000
+Z13 !s90 -reportprogress|300|-93|-work|work|Practica1.vho|
+!s107 Practica1.vho|
+!i113 1
+Z14 o-93 -work work
+Z15 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 H73DDHU2ac^:D?]T;@N=M3
+!i122 0
+l76
+L54 28
+V:9n9ma92JRcO^oG6nb?k`2
+!s100 >:Wi^nX[YiN=@>>JC6K_83
+R10
+31
+R11
+!i10b 1
+R12
+R13
+Z16 !s107 Practica1.vho|
+!i113 1
+R14
+R15
+Epractica1
+R1
+R3
+R7
+R2
+Z17 DPx6 altera 11 dffeas_pack 0 22 ZQ]VGMHaJ[GMZ@f@b6[AU2
+R4
+R5
+R6
+Z18 DPx6 altera 28 altera_primitives_components 0 22 18Ti78zfmJ`i`agjOM[]Q2
+!i122 0
+R0
+R8
+R9
+l0
+L91 1
+V?EImHe>WkQ^RlL[[hdc403
+!s100 LTm7Ag<D:b9QH59JS[Ufh3
+R10
+31
+R11
+!i10b 1
+R12
+R13
+R16
+!i113 1
+R14
+R15
+Astructure
+R3
+R7
+R2
+R17
+R4
+R5
+R6
+R18
+DEx4 work 9 practica1 0 22 ?EImHe>WkQ^RlL[[hdc403
+!i122 0
+l161
+L111 415
+VZD2H:V=:ni_mCgAXPfd0d1
+!s100 n@o]@GdR5oj@Qk5ai5QB72
+R10
+31
+R11
+!i10b 1
+R12
+R13
+R16
+!i113 1
+R14
+R15
