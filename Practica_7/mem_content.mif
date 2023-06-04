@@ -21,7 +21,7 @@ DEPTH=256;
 ADDRESS_RADIX=UNS;
 DATA_RADIX=HEX;
 
---Multiplicacion con instrucciones
+-- Algoritmo de busqueda para encontrar el numero menor de una lista, para el procesador 68HC11
 
 CONTENT BEGIN
         0       :        96; --LDAA dir
