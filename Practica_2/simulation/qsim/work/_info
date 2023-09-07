@@ -1,0 +1,175 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Eduardo/Desktop/Practica2/simulation/qsim
+vhard_block
+Z1 !s110 1678454267
+!i10b 1
+!s100 FhX@H9aPJ43fKY^?ADWQK1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ii:W:6g;mQk?g<L9?TgRIX2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 dC:/Arquitectura/Practica2/simulation/qsim
+Z5 w1678454264
+Z6 8Practica2.vo
+Z7 FPractica2.vo
+!i122 10
+L0 465 45
+Z8 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z9 !s108 1678454267.000000
+Z10 !s107 Practica2.vo|
+Z11 !s90 -work|work|Practica2.vo|
+!i113 1
+Z12 o-work work
+Z13 tCvgOpt 0
+Epractica2
+Z14 w1678421872
+Z15 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 OTUTkBjTeYVegmIWhVi3N0
+Z16 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 C5K^h=:j[4HI?HO^UkN3:2
+Z17 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z18 DPx6 altera 11 dffeas_pack 0 22 dc5N=DKXMMTVYdUQ@D3FA2
+Z19 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z20 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z21 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z22 DPx6 altera 28 altera_primitives_components 0 22 ca:ehlQAg4;_gVV:^8MAg3
+!i122 8
+R0
+Z23 8Practica2.vho
+Z24 FPractica2.vho
+l0
+L91 1
+VhcCZKITaiCPJZPlMWF5i`3
+!s100 XWc8<U3Ckl?MYzZOVm<`T2
+Z25 OV;C;2020.1;71
+32
+Z26 !s110 1678421873
+!i10b 1
+Z27 !s108 1678421873.000000
+Z28 !s90 -work|work|Practica2.vho|
+Z29 !s107 Practica2.vho|
+!i113 1
+R12
+Z30 tExplicit 1 CvgOpt 0
+Astructure
+R15
+R16
+R17
+R18
+R19
+R20
+R21
+R22
+DEx4 work 9 practica2 0 22 hcCZKITaiCPJZPlMWF5i`3
+!i122 8
+l151
+L109 289
+VV8BD]@z`Ozkjbm<XSW;G23
+!s100 TZm3B5<JAQ5mYaf4P^^VO0
+R25
+32
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R12
+R30
+Epractica2_vhd_vec_tst
+Z31 w1678421871
+R20
+R21
+!i122 9
+R0
+Z32 8Practica2.vwf.vht
+Z33 FPractica2.vwf.vht
+l0
+L32 1
+V]o[6Ij@RNdb`YYmFXH@052
+!s100 cUaW[ZiLA24IAT6D6U^cM3
+R25
+32
+Z34 !s110 1678421874
+!i10b 1
+R27
+Z35 !s90 -work|work|Practica2.vwf.vht|
+Z36 !s107 Practica2.vwf.vht|
+!i113 1
+R12
+R30
+Apractica2_arch
+R20
+R21
+DEx4 work 21 practica2_vhd_vec_tst 0 22 ]o[6Ij@RNdb`YYmFXH@052
+!i122 9
+l51
+L34 70
+VB>JR^TP5A:0DS_Y:cIQ:l1
+!s100 Uik1S>Ig^X=<GmB;QoX@Q0
+R25
+32
+R34
+!i10b 1
+R27
+R35
+R36
+!i113 1
+R12
+R30
+vpractica2_vhdl
+R1
+!i10b 1
+!s100 9bm<9HmK`XhD7o2An`X7<3
+R2
+I^OmH_66RF8F`[?iANQ6nD0
+R3
+R4
+R5
+R6
+R7
+!i122 10
+L0 32 432
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vpractica2_vhdl_vlg_vec_tst
+R1
+!i10b 1
+!s100 ?o0MS0OLWXLH_fC4R2VRm2
+R2
+I7NjW5ZQ?V0jD75GfdK4[;2
+R3
+R4
+w1678454262
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 11
+L0 30 26
+R8
+r1
+!s85 0
+31
+R9
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R12
+R13

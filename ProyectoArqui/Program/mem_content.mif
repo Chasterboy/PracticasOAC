@@ -1,0 +1,116 @@
+-- Copyright (C) 2591-2015 Altera Corporation. All rights reserved.
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, the Altera Quartus Prime License Agreement,
+-- the Altera MegaCore Function License Agreement, or other 
+-- applicable license agreement, including, without limitation, 
+-- that your use is for the sole purpose of programming logic 
+-- devices manufactured by Altera and sold by Altera or its 
+-- authorized distributors.  Please refer to the applicable 
+-- agreement for further details.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=8;
+DEPTH=256;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=HEX;
+
+--Multiplicacion con instrucciones
+
+CONTENT BEGIN
+        0       :       96; --LDAA(dir) SI N = 0
+        1       :       47; -- N
+        2       :       C6; -- LDAB(inm)
+        3       :       00; -- 0x00
+        4       :       1A; -- CMP
+        5       :       7D; --JE
+        6       :       00; --DIR 
+        7       :       3D; --CASO 0
+
+        8       :       96; -- LDAA(DIR) SI N = 1
+        9       :       47; -- N
+        10      :       C6; -- LDAB(inm)
+        11      :       01; -- 0X01H
+        12      :       1A; --CMP
+        13      :       7D; -- JE
+        14      :       00; -- DIR
+        15      :       40; -- IMPRIMIR
+
+        16      :       96; --LDAB(DIR) --LOOP
+        17      :       47; --cont
+        18      :       D6; --LDAB(DIR)
+        19      :       48; -- N
+        20      :       1A; --CMP
+        21      :       08; --JB
+        22      :       00; --DIR
+        23      :       40; --IMPRIMIR
+
+        24      :       96; --LDAA(DIR)
+        25      :       4A; --BAJA
+        26      :       C6; --LDAB(INM)
+        27      :       02; --0X02h
+        28      :       1B; --ABA
+        29      :       A8; --STAA
+        30      :       4A; --BAJA
+        31      :       1A; --CMP
+        32      :       67; --JC
+        33      :       00; --dir
+        34      :       26; --PARTE ALTA
+        35      :       7E; --JMP
+        36      :       00; --dir
+        37      :       2D; --CONTADOR
+
+        38      :       96; --LDAA(dir) PARTE ALTA:
+        39      :       49; --Alta
+        40      :       C6; --LDAB(inm)
+        41      :       01; --0X01H
+        42      :       1B; --ABA
+        43      :       A8; --STAA
+        44      :       49; --Alta
+
+        45      :       96; --LDAA(dir) --CONTADOR:
+        46      :       48; --cont
+        47      :       C6; --LDAB(inm)
+        48      :       01; --0X01H
+        49      :       1B; --ABA
+        50      :       A8; --STAA
+        51      :       48; --cont
+        52      :       7E; --JMP
+        53      :       00; --dir
+        54      :       10; --LOOP
+
+
+        55      :       7E;--JMP FIN:
+        56      :       00;--dir
+        57      :       37;--FIN
+
+        58      :       86; --LDAA (inm) CASO 0:
+        59      :       03; -- 0xFF
+        60      :       A8; --STAA
+        61      :       49; -- Alta
+        62      :       A8; --STAA
+        63      :       48; --baja
+
+        64      :       96; --LDAA(dir) IMPRIMIR
+        65      :       49; --Alta
+        66      :       96; -- LDAA(dir)
+        67      :       4A; --baja
+        68      :       7E;
+        69      :       00;
+        70      :       37;
+
+
+        71      :       0C; --N 47H
+        72      :       02; --cont 48H
+        73      :       00; --Alta 49H
+        74      :       01; --Baja 4AH
+
+
+[75..255]       :       00;
+END;
